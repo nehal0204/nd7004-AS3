@@ -6,90 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" type="text/css" href='style.css'>
+
 
     <title>Pikachu</title>
   </head>
-
-  <body style="background: #5E4949;">
-    <header>
-      <nav>
+  <body class="bg-[#4E0080] flex flex-col min-h-screen max-w-screen-lg mx-auto">
+    <header class="top-0">
+      <nav class="flex justify-between items-center p-4">
         <a href="">
-          <img src="img/pokeball.png" alt="logo" class="imgPokeball">
+          <img src="img/pokeball.png" alt="logo" class="w-36">
         </a>
         <div class="navbar">
-          <a href="#bio1" class="bio">Biology</a>
-          <a href="#stat1" class="stats">Stats</a>
-          <a href="#evo1" class="evo">Evolution</a>
+          <a href="#bio1" class="mx-6 text-3xl text-white hover:bg-[#CC565C] hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000]">Biology</a>
+          <a href="#stats1" class="mx-4 text-3xl text-white hover:bg-[#CC565C] hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000]">Stats</a>
+          <a href="#evo1" class="ml-8 text-3xl text-white hover:bg-[#CC565C] hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000]">Evolution</a>
         </div>
+        
       </nav>
     </header>
-    <!--breakLine-->
-    <hr style="height:20px; background-color:#EE4035;; position: absolute;
-    width: 1040px;
-    height: 13px;
-    left: 350px;
-    top: 376px;">
-      <h2 class="headingPika">Pikachu</h2>
-    <p class="bioHead" id="bio1">Biology:</p>
-      <img src="img/Pikachu-Bio.png" alt="Pikachu" class="pikachuImg">
-      <p class="bioPara">Pikachu is a short, chubby rodent Pokémon. It is covered in yellow fur with two horizontal 
-        brown stripes on its back. It has a small mouth, long, pointed ears with black tips, and brown eyes. 
-        Each cheek is a red circle that contains a pouch for electricity storage.</p>
-      <p class="bioPara1">Pikachu charges itself while sleeping overnight, though stress and a lack of 
-        sleep can affect this. It is able to release electric discharges of varying intensity. Pikachu has 
-        been known to build up energy in its glands, which it will need to discharge to avoid complications. 
-        It is also able to release energy through its tail, which acts as a grounding rod, as well as recharging
-        fellow Pikachu with electric shocks.</p>  
-
-       <!--breakLine--> 
-        <hr style="height:20px; background-color:#EE4035;position: absolute;
-        width: 1040px;
-        height: 13px;
-        left: 350px;
-        top: 1448px;">
-
-        <img src="img/ash-and-pikachu-MAin.png" class="ashPika" alt="#">
-        <div class="ashTepika">
-       <a class="effect">Pikachu & Ash</a>
+    <main class="flex-1">
+      <hr class="border-4 border-red-600" />
+      <section class="flex items-center">
+        <div>
+        <h1 class="font-bold text-6xl tracking-wide ml-96 mt-11 text-white">Pikachu</h1>
+        <div class="p-14 mt-14 mb-2">
+        <h2 class="text-white text-3xl" id="bio1">Biology:</h2>
+        <div class="flex justify-between items-center">
+        <img src="img/Pikachu-Bio.png" alt="Pikachu" class="sm:w-full w-full md:w-3/5 lg:2/5 -ml-14 mt-6">
+        <p class="text-2xl tracking-wide text-white  -ml-20 mt-12 leading-10">Pikachu is a short, chubby rodent Pokémon. It is covered in yellow fur with two horizontal 
+          brown stripes on its back. It has a small mouth, long, pointed ears with black tips, and brown eyes. 
+          Each cheek is a red circle that contains a pouch for electricity storage.</p>
         </div>
-        <!--breakLine-->
-        <hr style="height:20px; background-color:#EE4035;; position: absolute;
-    width: 1040px;
-    height: 13px;
-    left: 350px;
-    top: 2176px;">
-    <p class="statsCon" id="stat1">Stats:</p>
-    <div class="statsNum">
-      <p class="one">3/4</p>
-      <p class="two">3/4</p>
-      <p class="three">3/4</p>
-      <p class="four">2/4</p>
-    </div>
-    <p class="speed">Speed</p>
-    <p class="power">Power</p>
-    <p class="skill">Skill</p>
-    <p class="jump">Jump</p>
+        <p class="text-2xl tracking-wide text-white -mt-1 leading-10">Pikachu charges itself while sleeping overnight, though stress and a lack of 
+          sleep can affect this. It is able to release electric discharges of varying intensity. Pikachu has 
+          been known to build up energy in its glands, which it will need to discharge to avoid complications. 
+          It is also able to release energy through its tail, which acts as a grounding rod, as well as recharging
+          fellow Pikachu with electric shocks.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      <section>
+        <hr class="border-4 border-red-600" />
+        <div class="flex justify-between items-center p-14 ml-28">
+          <img src="img/ash-and-pikachu-MAin.png" class="sm:mb-32 sm:w-full md:w-full lg:w-2/5 lg:mt-20 lg:-ml-16 -ml-16 mt-6 w-2/5" alt="Ash&Pikachu">
+          <div class="-ml-44">
+            <p class="sm:mt-72 sm:-ml-44 md:-ml-56 md:mt-96 lg:mr-36 lg:py-4 lg:px-2 lg:-m-1 text-5xl text-white hover:bg-[#CC565C] hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000] mr-36 py-2 px-4">Pikachu & Ash</p>
+          </div>
+          </div>
+        <hr class="border-4 border-red-600 mt-11" />
 
-    <!--breakLine-->
-    <hr style="height:20px; background-color:#EE4035;; position: absolute;
-    width: 1040px;
-    height: 13px;
-    left: 350px;
-    top: 2876px;">
+      </section>
+      <section id="stats1">
+      <div class="p-14">
+      <h3 class="text-white text-3xl">Stats:</h3>
+      </div>
+      <div class="w-full flex justify-between mb-2 p-14 -mt-16 tracking-tighter">
+        <div class="text-3xl  text-white">3/4</div>
+        <div class="text-3xl  text-white">3/4</div>
+        <div class="text-3xl  text-white">3/4</div>
+        <div class="text-3xl  text-white">2/4</div>
+      </div>
+      <div class="w-full flex justify-between mb-2 p-14 -mt-16 tracking-tighter">
+        <div class="text-3xl  text-white">Speed</div>
+        <div class="text-3xl  text-white">Power</div>
+        <div class="text-3xl  text-white">Skill</div>
+        <div class="text-3xl  text-white">Jump</div>
+      </div>
+      </section>
 
-    <p class="evoCont" id="evo1">Evolution:</p>
-    <img src="img/pika evo.png" class="evo1">
-    <img src="img/raichu.png" class="evo2">
-    <p class="pikaEvo">Pikachu</p>
-    <p class="raiEvo">Raichu</p>
-    <!--breakLine-->
-    <hr style="height:20px; background-color:#EE4035;; position: absolute;
-    width: 1040px;
-    height: 13px;
-    left: 350px;
-    top: 3876px;">
-    <footer>© Copyright 2022 Nehal Dogra</footer>
+      <section>
+        <hr class="border-4 border-red-600" />
+        <div class="p-14">
+          <h3 class="text-white text-3xl" id="evo1">Evolution:</h3>
+          </div>
+        <div class="flex justify-between items-center p-14 ml-28">
+          <img src="img/pika evo.png" alt="pika" class="-ml-16 mt-6 w-2/5">
+           <img src="img/raichu.png" alt="raichu" class="-ml-16 mt-6 w-2/5">
+        </div>
+        <div class="flex justify-between items-center p-14 ml-28">
+           <p class="ml-6 mt-6 text-white text-4xl">Pikachu</p>
+           <img src="img/arrow.webp" class="xs:w- sm:w-11 -ml-16 mt-6 w-auto md:w-24 lg:w-36" alt="arrow">
+          <p class="ml-6 mt-6 text-white text-4xl">Raichu</p>
+        </div>
+        <hr class="border-4 border-red-600 mt-11"/>
+
+      </section>
+    </main>
+      
+    <footer class="text-2xl text-white xs:ml-24 sm:ml-36 md:ml-52 lg:ml-80 px-2 py-4 ml-96">© Copyright 2022 Nehal Dogra</footer>
   </body>
 
 </html>
