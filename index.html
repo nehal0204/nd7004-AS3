@@ -6,20 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./media-queries.css">
 
 
     <title>Pikachu</title>
+    <style>
+      .button {
+  position: relative;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+
+.button--loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 5px solid transparent;
+  border-top-color: #EE4035;
+  border-radius: 50%;
+  animation: button-loading-spinner 2s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(2turn);
+  }
+}
+
+    </style>
   </head>
   <body class="bg-[#4E0080] flex flex-col min-h-screen max-w-screen-lg mx-auto">
     <header class="top-0">
       <nav class="flex justify-between items-center p-4">
         <a href="">
-          <img src="img/pokeball.png" alt="logo" class="w-36">
+          <img src="img/pokeball.png"  alt="logo" class="w-36">
         </a>
         <div class="navbar">
-          <a href="#bio1" class="mx-6 text-3xl text-white hover:bg-[#CC565C] hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000]">Biology</a>
-          <a href="#stats1" class="mx-4 text-3xl text-white hover:bg-[#CC565C] hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000]">Stats</a>
-          <a href="#evo1" class="ml-8 text-3xl text-white hover:bg-[#CC565C] hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000]">Evolution</a>
+          <a href="#bio1" class="mx-2 text-3xl text-white hover:text-red-600 hover:shadow-[0_4px_#000000] transition-all hover:underline" href="bio1">Biology</a>
+          <a href="#stats1" class="mx-4 text-3xl text-white hover:text-red-600 hover:shadow-[0_4px_#000000] transition-all hover:underline" href="stats">Stats</a>
+          <a href="#evo1" class="ml-8 text-3xl text-white hover:text-red-600 hover:shadow-[0_4px_#000000] transition-all hover:underline" href="evo1">Evolution</a>
         </div>
         
       </nav>
@@ -28,39 +72,42 @@
       <hr class="border-4 border-red-600" />
       <section class="flex items-center">
         <div>
-        <h1 class="font-bold text-6xl tracking-wide ml-96 mt-11 text-white">Pikachu</h1>
-        <div class="p-14 mt-14 mb-2">
+        <h1 class="font-bold text-6xl tracking-wide ml-96 mt-11 animate-bounce text-white">Pikachu</h1>
+        <br>
+          <a href="#">
+            <button onclick="this.classList.toggle('button--loading')"
+              class=" button bg-[#9775FA] ml-96 py-2 px-4 text-gray-50 rounded-md hover:drop-shadow-2xl transition-all ease-linear hover:-translate-y-1 hover:bg-[#5A22FE] hover:shadow-[0_4px_4px_#000000]"><span class="button_text">Know More</span>
+            </button>
+          </a>
         <h2 class="text-white text-3xl" id="bio1">Biology:</h2>
-        <div class="flex justify-between items-center">
-        <img src="img/Pikachu-Bio.png" alt="Pikachu" class="sm:w-full w-full md:w-3/5 lg:2/5 -ml-14 mt-6">
-        <p class="text-2xl tracking-wide text-white  -ml-20 mt-12 leading-10">Pikachu is a short, chubby rodent Pokémon. It is covered in yellow fur with two horizontal 
+        
+        <img src="img/Pikachu-Bio.png" alt="Pikachu" class="ml-56 mt-6 w-1/2">
+        <p class="text-2xl tracking-wide text-white  -ml-2 mt-12 leading-10">Pikachu is a short, chubby rodent Pokémon. It is covered in yellow fur with two horizontal 
           brown stripes on its back. It has a small mouth, long, pointed ears with black tips, and brown eyes. 
           Each cheek is a red circle that contains a pouch for electricity storage.</p>
-        </div>
-        <p class="text-2xl tracking-wide text-white -mt-1 leading-10">Pikachu charges itself while sleeping overnight, though stress and a lack of 
+         <p class="text-2xl tracking-wide text-white  -ml-2 mt-12 leading-10"> Pikachu charges itself while sleeping overnight, though stress and a lack of 
           sleep can affect this. It is able to release electric discharges of varying intensity. Pikachu has 
           been known to build up energy in its glands, which it will need to discharge to avoid complications. 
           It is also able to release energy through its tail, which acts as a grounding rod, as well as recharging
           fellow Pikachu with electric shocks.</p>
-          </div>
         </div>
       </section>
+      <br>
+      <br>
       
-      
-      <section>
-        <hr class="border-4 border-red-600" />
-        <div class="flex justify-between items-center p-14 ml-28">
-          <img src="img/ash-and-pikachu-MAin.png" class="sm:mb-32 sm:w-full md:w-full lg:w-2/5 lg:mt-20 lg:-ml-16 -ml-16 mt-6 w-2/5" alt="Ash&Pikachu">
-          <div class="-ml-44">
-            <p class="sm:mt-72 sm:-ml-44 md:-ml-56 md:mt-96 lg:mr-36 lg:py-4 lg:px-2 lg:-m-1 text-5xl text-white hover:bg-[#CC565C] hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000] mr-36 py-2 px-4">Pikachu & Ash</p>
+      <hr class="border-4 border-red-600" />
+      <section class="flex items-center">
+  
+        <div class="flex items-center">
+          <img src="img/ash-and-pikachu-MAin.png" class="flex items-center w-2/5 mt-12 " alt="Ash&Pikachu">
           </div>
-          </div>
-        <hr class="border-4 border-red-600 mt-11" />
-
+        <p class="text-5xl text-white -ml-96 -mr-52 hover:bg-[#CC565C] transition-all hover:text-[#F1DF61] hover:shadow-[0px_4px_4px_#000000]">Pikachu<br><span class="ml-16">&</span><br><span class="ml-10">Ash</span></p>
+            
       </section>
+      <hr class="border-4 border-red-600 mt-11" />
       <section id="stats1">
       <div class="p-14">
-      <h3 class="text-white text-3xl">Stats:</h3>
+      <h3 class="text-white text-3xl" id="stats">Stats:</h3>
       </div>
       <div class="w-full flex justify-between mb-2 p-14 -mt-16 tracking-tighter">
         <div class="text-3xl  text-white">3/4</div>
@@ -87,7 +134,7 @@
         </div>
         <div class="flex justify-between items-center p-14 ml-28">
            <p class="ml-6 mt-6 text-white text-4xl">Pikachu</p>
-           <img src="img/arrow.webp" class="xs:w- sm:w-11 -ml-16 mt-6 w-auto md:w-24 lg:w-36" alt="arrow">
+           <img src="img/arrow.webp" class="-ml-16 mt-6 w-20" alt="arrow">
           <p class="ml-6 mt-6 text-white text-4xl">Raichu</p>
         </div>
         <hr class="border-4 border-red-600 mt-11"/>
@@ -95,7 +142,7 @@
       </section>
     </main>
       
-    <footer class="text-2xl text-white xs:ml-24 sm:ml-36 md:ml-52 lg:ml-80 px-2 py-4 ml-96">© Copyright 2022 Nehal Dogra</footer>
+    <footer class="text-2xl text-white px-2 py-4 ml-96">© Copyright 2022 Nehal Dogra</footer>
   </body>
 
 </html>
